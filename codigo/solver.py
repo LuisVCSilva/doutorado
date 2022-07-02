@@ -1,5 +1,6 @@
 from numpy import *
 from scipy.special import spherical_jn, spherical_yn
+import matplotlib.pyplot as plt
 from tqdm import tqdm
 import json
 import sys
@@ -62,11 +63,13 @@ def main(args):
    f = zeros(malha+1)
 
    ne = int(((max_energia-min_energia)/delta_e) + 1.5)
-   for n in tqdm(range(ne+1)[1:]):  
+   #print(ne)
+   k = 0
+   for n in (range(ne+1)[1:]):  
       e = min_energia + (n-1)*delta_e
       q = sqrt(e/hbar2m)
       lambda2 = pi/q/2.0
-      
+
       for l in range(max_l+1):
          rmin	= min_x
          secao[l] = 0.0
@@ -81,17 +84,23 @@ def main(args):
 
          r = [rmin + (i+0.0) * dx for i in range(malha+1)]
          vpot = [epsilon * (-2.0*pow(sigma/r_i,6) + (sigma/r_i**12)) for r_i in r]
-
+         
          f =  [1.0 - ddx12/hbar2m * ( hbar2m*l*(l+1)/(r_i**2) + vpot_i - e ) for (r_i,vpot_i) in zip(r,vpot)]
+         
          u = zeros(malha+1)
          pts_iniciais (r, u)
          for i in range(malha)[1:]:
             u[i+1] = ((12.0-10.0*f[i])*u[i]-f[i-1]*u[i-1])/f[i+1]
 
 
+
+
          normalizacao = 0.0 
          normalizacao = sum([(u_i**2)*dx for u_i in u])
          u = [u_i/sqrt(normalizacao) for u_i in u]
+
+
+
          kappa = r1*u[i2]/(r2*u[i1])
          tandelta = (kappa*spherical_jn(l,q*r1)-spherical_jn(l,q*r2)) / (kappa*spherical_yn(l,q*r1)-spherical_yn(l,q*r2))
          delta = arctan(tandelta)
@@ -100,7 +109,13 @@ def main(args):
          p = [p_i/(p[i2]/u[i2]) for p_i in p]
          p = [sin(q*r_i-l*pi/2.0 + delta) for r_i in r]
          p = [p_i/(p[i2]/u[i2]) for p_i in p]
+
+         #plt.plot(u)
+         #plt.savefig(str(k)+".png")
+         #plt.clf()
+         #k = k+1
 			 
+
       print("{} {}".format(e, sum(secao)),end="")
       for l in range(max_l+1):
          print(" {}".format(secao[l]),end=" ")
