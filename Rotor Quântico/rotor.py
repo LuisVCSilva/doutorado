@@ -1,3 +1,4 @@
+#caso semi-classico, basicamente um modelo de ising rotacional  de algumas moléculas diatomicas dada a temperatura rotacional, super simplificado mas ok
 from tqdm import tqdm 
 import numpy as np
 import matplotlib.pyplot as plt
