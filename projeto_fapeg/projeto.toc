@@ -1,4 +1,11 @@
-\contentsline {section}{\numberline {1}Objetivos}{1}{}%
-\contentsline {section}{\numberline {2}Metodologia}{1}{}%
-\contentsline {section}{\numberline {3}Resultados Esperados}{1}{}%
-\contentsline {section}{\numberline {4}Cronograma}{1}{}%
+\contentsline {section}{\numberline {1}Intodução e Justificativa}{1}{section.1}%
+\contentsline {section}{\numberline {2}Objetivos}{4}{section.2}%
+\contentsline {section}{\numberline {3}Metodologia}{6}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Softwares e bibliotecas utilizadas}{6}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Instalações de teste}{6}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Laboratórios computacionais}{7}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Métricas de performance}{7}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Avaliação do processo de flotação experimental}{7}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Avaliação dos resultados numéricos}{8}{subsubsection.3.4.2}%
+\contentsline {section}{\numberline {4}Resultados Esperados}{9}{section.4}%
+\contentsline {section}{\numberline {5}Cronograma}{10}{section.5}%

@@ -1,0 +1,213 @@
+\begin{thebibliography}{10}
+
+\bibitem{zhang2014lattice}
+Jinfeng Zhang, Limin Wang, and Jie Ouyang.
+\newblock Lattice boltzmann model for the volume-averaged navier-stokes
+  equations.
+\newblock {\em Europhysics Letters}, 107(2):20001, 2014.
+
+\bibitem{schlauch2013comparison}
+Eva Schlauch, Martin Ernst, Ryohei Seto, Heiko Briesen, Martin Sommerfeld, and
+  Marek Behr.
+\newblock Comparison of three simulation methods for colloidal aggregates in
+  stokes flow: Finite elements, lattice boltzmann and stokesian dynamics.
+\newblock {\em Computers \& Fluids}, 86:199--209, 2013.
+
+\bibitem{ning2016upscaling}
+Yang Ning, Shuai He, Honglin Liu, Hongyan Wang, and Guan Qin.
+\newblock Upscaling in numerical simulation of shale transport properties by
+  coupling molecular dynamics simulation with lattice boltzmann method.
+\newblock In {\em SPE/AAPG/SEG Unconventional Resources Technology Conference},
+  pages URTEC--2459219. URTec, 2016.
+
+\bibitem{chen2020lattice}
+Songying Chen, Xiaohang Chen, Dongdong Wan, Xuan Yi, Xun Sun, Li~Ji, and
+  Guichao Wang.
+\newblock A lattice boltzmann study of the collisions in a particle-bubble
+  system under turbulent flows.
+\newblock {\em Powder technology}, 361:759--768, 2020.
+
+\bibitem{karimi2014cfd}
+Mohsen Karimi.
+\newblock {\em CFD analysis of solid-liquid-gas interactions in flotation
+  vessels}.
+\newblock PhD thesis, Stellenbosch: Stellenbosch University, 2014.
+
+\bibitem{michaux2018challenges}
+B~Michaux, M~Rudolph, and MA~Reuter.
+\newblock Challenges in predicting the role of water chemistry in flotation
+  through simulation with an emphasis on the influence of electrolytes.
+\newblock {\em Minerals Engineering}, 125:252--264, 2018.
+
+\bibitem{ives2012scientific}
+Kenneth~James Ives.
+\newblock {\em The scientific basis of flotation}, volume~75.
+\newblock Springer Science \& Business Media, 2012.
+
+\bibitem{hirt1981volume}
+Cyril~W Hirt and Billy~D Nichols.
+\newblock Volume of fluid (vof) method for the dynamics of free boundaries.
+\newblock {\em Journal of computational physics}, 39(1):201--225, 1981.
+
+\bibitem{tryggvason2001front}
+Gr{\'e}tar Tryggvason, Bernard Bunner, Asghar Esmaeeli, Damir Juric,
+  N~Al-Rawahi, W~Tauber, J~Han, S~Nas, and Y-J Jan.
+\newblock A front-tracking method for the computations of multiphase flow.
+\newblock {\em Journal of computational physics}, 169(2):708--759, 2001.
+
+\bibitem{anderson1998diffuse}
+Daniel~M Anderson, Geoffrey~B McFadden, and Adam~A Wheeler.
+\newblock Diffuse-interface methods in fluid mechanics.
+\newblock {\em Annual review of fluid mechanics}, 30(1):139--165, 1998.
+
+\bibitem{he1997theory}
+Xiaoyi He and Li-Shi Luo.
+\newblock Theory of the lattice boltzmann method: From the boltzmann equation
+  to the lattice boltzmann equation.
+\newblock {\em Physical review E}, 56(6):6811, 1997.
+
+\bibitem{kruger2017lattice}
+Timm Kr{\"u}ger, Halim Kusumaatmaja, Alexandr Kuzmin, Orest Shardt, Goncalo
+  Silva, and Erlend~Magnus Viggen.
+\newblock The lattice boltzmann method.
+\newblock {\em Springer International Publishing}, 10(978-3):4--15, 2017.
+
+\bibitem{xia2020role}
+Yangchao Xia, Rui Zhang, Yijun Cao, Yaowen Xing, and Xiahui Gui.
+\newblock Role of molecular simulation in understanding the mechanism of
+  low-rank coal flotation: A review.
+\newblock {\em Fuel}, 262:116535, 2020.
+
+\bibitem{foucaud2019review}
+Y~Foucaud, Michael Badawi, L~Filippov, I~Filippova, and S~Leb{\`e}gue.
+\newblock A review of atomistic simulation methods for surface
+  physical-chemistry phenomena applied to froth flotation.
+\newblock {\em Minerals Engineering}, 143:106020, 2019.
+
+\bibitem{abdalla2018prediction}
+Mohamed~AM Abdalla, Huiqing Peng, Di~Wu, Lenna Abusin, and Tawum~J Mbah.
+\newblock Prediction of hydrophobic reagent for flotation process using
+  molecular modeling.
+\newblock {\em ACS omega}, 3(6):6483--6496, 2018.
+
+\bibitem{ghorbanpour2020numerical}
+Amirabbas Ghorbanpour-Arani, Mohammad-Hassan Rahimian, and Reza
+  Haghani-Hassan-Abadi.
+\newblock Numerical simulation of dissolved air flotation using a lattice
+  boltzmann method.
+\newblock {\em Physical Review E}, 101(2):023105, 2020.
+
+\bibitem{gunstensen1991lattice}
+Andrew~K Gunstensen, Daniel~H Rothman, St{\'e}phane Zaleski, and Gianluigi
+  Zanetti.
+\newblock Lattice boltzmann model of immiscible fluids.
+\newblock {\em Physical review A}, 43(8):4320, 1991.
+
+\bibitem{shan1993lattice}
+Xiaowen Shan and Hudong Chen.
+\newblock Lattice boltzmann model for simulating flows with multiple phases and
+  components.
+\newblock {\em Physical review E}, 47(3):1815, 1993.
+
+\bibitem{swift1996lattice}
+Michael~R Swift, Enzo Orlandini, WR~Osborn, and JM~Yeomans.
+\newblock Lattice boltzmann simulations of liquid-gas and binary fluid systems.
+\newblock {\em Physical Review E}, 54(5):5041, 1996.
+
+\bibitem{he1999lattice}
+Xiaoyi He, Shiyi Chen, and Raoyang Zhang.
+\newblock A lattice boltzmann scheme for incompressible multiphase flow and its
+  application in simulation of rayleigh--taylor instability.
+\newblock {\em Journal of computational physics}, 152(2):642--663, 1999.
+
+\bibitem{craster2006dynamics}
+RV~Craster and OK~Matar.
+\newblock On the dynamics of liquid lenses.
+\newblock {\em Journal of colloid and interface science}, 303(2):503--516,
+  2006.
+
+\bibitem{sharp1984overview}
+David~H Sharp.
+\newblock An overview of rayleigh-taylor instability.
+\newblock {\em Physica D: Nonlinear Phenomena}, 12(1-3):3--18, 1984.
+
+\bibitem{wang2018bubble}
+Shi-Ping Wang, A-Man Zhang, Yun-Long Liu, Shuai Zhang, and Pu~Cui.
+\newblock Bubble dynamics and its applications.
+\newblock {\em Journal of Hydrodynamics}, 30(6):975--991, 2018.
+
+\bibitem{peng2021bubble}
+Cheng Peng, Yikun Liu, Weihua Gui, Zhaohui Tang, and Qing Chen.
+\newblock Bubble image segmentation based on a novel watershed algorithm with
+  an optimized mark and edge constraint.
+\newblock {\em IEEE Transactions on Instrumentation and Measurement}, 71:1--10,
+  2021.
+
+\bibitem{jahedsaravani2017image}
+Aa~Jahedsaravani, M~Massinaei, and MH~Marhaban.
+\newblock An image segmentation algorithm for measurement of flotation froth
+  bubble size distributions.
+\newblock {\em Measurement}, 111:29--37, 2017.
+
+\bibitem{barrata2023dolfinx}
+Igor~A Barrata, Joseph~P Dean, J{\o}rgen~S Dokken, Michal HABERA, Jack HALE,
+  Chris Richardson, Marie~E Rognes, Matthew~W Scroggs, Nathan Sime, and Garth~N
+  Wells.
+\newblock Dolfinx: The next generation fenics problem solving environment.
+\newblock 2023.
+
+\bibitem{ketcheson2012pyclaw}
+David~I Ketcheson, Kyle Mandli, Aron~J Ahmadia, Amal Alghamdi, Manuel~Quezada
+  de~Luna, Matteo Parsani, Matthew~G Knepley, and Matthew Emmett.
+\newblock Pyclaw: Accessible, extensible, scalable tools for wave propagation
+  problems.
+\newblock {\em SIAM Journal on Scientific Computing}, 34(4):C210--C231, 2012.
+
+\bibitem{kummerlander2023openlb}
+Adrian Kummerl{\"a}nder, Samuel~J Avis, Halim Kusumaatmaja, Fedor Bukreev,
+  Michael Crocoll, Davide Dapelo, Simon Gro{\ss}mann, Nicolas Hafen, Shota Ito,
+  Julius Je{\ss}berger, et~al.
+\newblock Openlb user guide: Associated with release 1.6 of the code.
+\newblock {\em arXiv preprint arXiv:2307.11752}, 2023.
+
+\bibitem{ahrens200536}
+James Ahrens, Berk Geveci, Charles Law, C~Hansen, and C~Johnson.
+\newblock 36-paraview: An end-user tool for large-data visualization.
+\newblock {\em The visualization handbook}, 717:50038--1, 2005.
+
+\bibitem{kawatra2011fundamental}
+S~Komar Kawatra and P~Darling.
+\newblock Fundamental principles of froth flotation.
+\newblock {\em SME mining engineering handbook}, 2:1517--1531, 2011.
+
+\bibitem{chen1996boundary}
+Shiyi Chen, Daniel Martinez, and Renwei Mei.
+\newblock On boundary conditions in lattice boltzmann methods.
+\newblock {\em Physics of fluids}, 8(9):2527--2536, 1996.
+
+\bibitem{gupta2007lattice}
+Amit Gupta.
+\newblock Lattice boltzmann simulation to study single and multi bubble
+  dynamics.
+\newblock 2007.
+
+\bibitem{jones1975interrelation}
+Owen~C Jones~Jr and Novak Zuber.
+\newblock The interrelation between void fraction fluctuations and flow
+  patterns in two-phase flow.
+\newblock {\em International Journal of Multiphase Flow}, 2(3):273--306, 1975.
+
+\bibitem{takada2001simulation}
+Naoki Takada, Masaki Misawa, Akio Tomiyama, and Shigeo Hosokawa.
+\newblock Simulation of bubble motion under gravity by lattice boltzmann
+  method.
+\newblock {\em Journal of nuclear science and technology}, 38(5):330--341,
+  2001.
+
+\bibitem{oberkampf1994proposed}
+William Oberkampf.
+\newblock A proposed framework for computational fluid dynamics code
+  calibration/validation.
+\newblock In {\em 25th Plasmadynamics and Lasers Conference}, page 2540, 1994.
+
+\end{thebibliography}
