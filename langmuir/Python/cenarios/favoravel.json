@@ -1,0 +1,10 @@
+{
+    "Lx": 128,
+    "Ly": 128,
+    "LT": 5,
+    "rc": 0.1,
+    "rA": 2.0,
+    "rD": 1.0,
+    "modo":"csv,plot",
+    "snapshot_intervalo":10000
+}
