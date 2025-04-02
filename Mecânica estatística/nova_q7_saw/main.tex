@@ -1,0 +1,61 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath, amssymb, graphicx, listings}
+
+\title{caminhada autoevitante - variação da questão 7}
+\author{Luis Vinicius}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Questão 7 para caminhada autoevitante}
+
+\subsection{Pergunta}
+
+Considere uma caminhada autoevitante em duas dimensões: A cada passo, escolhe-se aleatoriamente uma direção permitida e dá um passo de comprimento \( l \) nessa direção, sem cruzar um caminho já percorrido.
+
+\begin{itemize}
+    \item[(a)] Escrever um código computacional para simular este passeio autoevitante.
+    \item[(b)] Estimar as distribuições de probabilidade de \( r \), a distância da partícula à origem, e \( \theta \), o ângulo que o vetor posição da partícula faz com a direção horizontal.
+    \item[(c)] Calcular o coeficiente de difusão desta partícula e compará-lo com o caso da caminhada aleatória simples.
+\end{itemize}
+
+\subsection{Resposta}
+
+\subsubsection{(a) Código Computacional para Simular um Passeio Autoevitante em Duas Dimensões}
+
+Não pode-se visitar um local já percorrido.
+\subsubsection{(b) Estimando as Distribuições de Probabilidade de \( r \) e \( \theta \)}
+
+A distância radial \( r \) da partícula à origem e o ângulo \( \theta \) do vetor posição são dados por:
+
+\[
+r = \sqrt{x^2 + y^2}
+\]
+
+\[
+\theta = \tan^{-1} \left(\frac{y}{x}\right)
+\]
+
+Na questão 7 original, \( r \) cresce como \( \sqrt{t} \), aqui
+
+\[
+\langle r^2 \rangle \sim A t^{2 \alpha}
+\]
+
+Quanto vale alfa? Qual caminho cresce mais rápido?
+
+\subsubsection{(c) Cálculo do Coeficiente de Difusão}
+
+O coeficiente de difusão é definido como:
+
+\[
+D = \lim_{t \to \infty} \frac{\langle r^2 \rangle}{2d t}
+\]
+
+onde \( d = 2 \) para um sistema bidimensional.
+
+Para um passeio aleatório simples, \( D \) é constante, pois \( \langle r^2 \rangle \sim t \). Nesse novo caso, o que acontece? Difunde igual, mais ou menos?
+\end{document}
+
