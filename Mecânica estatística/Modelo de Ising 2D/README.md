@@ -28,8 +28,8 @@ chmod +x run_all.sh
 
 Isso irá:
 
-- Criar 30 pastas com `parametros.json` e cópias de `sim.py`
-- Rodar cada simulação individualmente
+- Criar 30 pastas com `parametros.json`
+- Rodar `sim.py` para cada experimento
 - Agregar os resultados e gerar a curva da magnetização média por spin vs. temperatura
 
 ### 2. Limpar os arquivos gerados
