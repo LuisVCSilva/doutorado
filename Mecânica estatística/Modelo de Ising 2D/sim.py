@@ -4,8 +4,16 @@ import matplotlib.animation as animation
 import json
 import csv
 import os
+import sys
 
-with open("parametros.json", "r") as f:
+# Verifica se o diretório foi passado como argumento
+if len(sys.argv) < 2:
+    print("Uso: python sim.py <diretorio>")
+    sys.exit(1)
+
+diretorio = sys.argv[1]
+
+with open(os.path.join(diretorio, "parametros.json"), "r") as f:
     params = json.load(f)
 
 interacao_J = params["interacao_J"]
@@ -96,7 +104,7 @@ anim = animation.FuncAnimation(
     repeat=False
 )
 
-saida_base = f"saida_T{temperatura:.2f}".replace('.', '_')
+saida_base = os.path.join(diretorio, f"saida_T{temperatura:.2f}".replace('.', '_'))
 
 print("Salvando vídeo...")
 writer = animation.FFMpegWriter(fps=20)

@@ -1,15 +1,11 @@
 import os
 import subprocess
 
-pastas = [p for p in os.listdir() if os.path.isdir(p) and p.startswith("simulacao_")]
+diretorio_base = "."
 
-for pasta in sorted(pastas):
-    caminho_script = os.path.join(pasta, "sim.py")
-    if os.path.isfile(caminho_script):
-        print(f"Executando: {caminho_script}")
-        try:
-            subprocess.run(["python", "sim.py"], cwd=pasta, check=True)
-        except subprocess.CalledProcessError as e:
-            print(f"Erro ao executar {caminho_script}: {e}")
-    else:
-        print(f"Script não encontrado em {pasta}")
+for nome_pasta in os.listdir(diretorio_base):
+    caminho_pasta = os.path.join(diretorio_base, nome_pasta)
+    if os.path.isdir(caminho_pasta) and os.path.isfile(os.path.join(caminho_pasta, "parametros.json")):
+        print(f"Executando simulação em: {caminho_pasta}")
+        subprocess.run(["python", "sim.py", caminho_pasta])
+
