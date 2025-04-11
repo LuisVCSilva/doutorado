@@ -1,11 +1,10 @@
-import os
-import subprocess
+#!/bin/bash
 
-diretorio_base = "." 
+echo "Limpando diretórios de simulação..."
+rm -rf simulacao_*/
 
-for nome_pasta in os.listdir(diretorio_base):
-    caminho_pasta = os.path.join(diretorio_base, nome_pasta)
-    if os.path.isdir(caminho_pasta) and os.path.isfile(os.path.join(caminho_pasta, "parametros.json")):
-        print(f"Executando simulação em: {caminho_pasta}")
-        subprocess.run(["python", "sim.py", caminho_pasta])
+echo "Removendo arquivos de saída gerais..."
+rm -f curva_magnetizacao_vs_temperatura.csv
+rm -f grafico_magnetizacao_vs_temperatura.png
 
+echo "Limpeza concluída!"

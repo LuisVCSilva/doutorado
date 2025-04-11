@@ -30,6 +30,7 @@ for i, T in enumerate(temperaturas, start=1):
     with open(caminho_json, "w") as f:
         json.dump(parametros, f, indent=4)
 
+    shutil.copy(nome_script, nome_pasta)
 
 print("Experimentos gerados com sucesso!")
 
