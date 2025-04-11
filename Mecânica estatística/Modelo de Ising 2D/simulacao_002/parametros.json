@@ -1,0 +1,9 @@
+{
+    "interacao_J": 1.0,
+    "campo_H": 0.0,
+    "tam_x": 50,
+    "tam_y": 50,
+    "passos_mc": 500,
+    "intervalo_amostra": 1,
+    "temperatura": 1.10345
+}
