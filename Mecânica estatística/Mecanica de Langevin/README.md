@@ -13,14 +13,14 @@ $$
 $$
 
 Onde:
-- \( \vec{p}(t) \): momento linear da partícula.
-- \( \beta \): coeficiente de dissipação (atrito viscoso).
-- \( \vec{F}_{\text{ex}}(\vec{r}) \): força externa determinística (ex: força de mola).
-- \( \vec{f}(t) \): força aleatória (ruído térmico).
+- $$ \vec{p}(t) $$: momento linear da partícula.
+- $$ \beta $$: coeficiente de dissipação (atrito viscoso).
+- $$ \vec{F}_{\text{ex}}(\vec{r}) $$: força externa determinística (ex: força de mola).
+- $$ \vec{f}(t) $$: força aleatória (ruído térmico).
 
 ---
 
-## 🎲 Propriedades Estatísticas do Ruído Aleatório \( \vec{f}(t) \)
+## 🎲 Propriedades Estatísticas do Ruído Aleatório $$ \vec{f}(t) $$
 
 O ruído é modelado como **ruído branco gaussiano**, com as seguintes propriedades:
 
@@ -56,9 +56,9 @@ O código implementa o método Leapfrog, onde as **velocidades são calculadas e
    $$
 
 2. **Evolução no tempo**:
-   - Atualiza posição: \( x_{i+1} = x_i + dt \cdot v_{i+\frac{1}{2}} \)
+   - Atualiza posição: $$ x_{i+1} = x_i + dt \cdot v_{i+\frac{1}{2}} $$
    - Calcula nova aceleração: inclui dissipação, força restauradora e ruído
-   - Atualiza velocidade de meio passo: \( v_{i+\frac{3}{2}} = v_{i+\frac{1}{2}} + dt \cdot a_{i+1} \)
+   - Atualiza velocidade de meio passo: $$ v_{i+\frac{3}{2}} = v_{i+\frac{1}{2}} + dt \cdot a_{i+1} $$
 
 ---
 
