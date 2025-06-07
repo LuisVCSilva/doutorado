@@ -5,6 +5,7 @@ import json
 import csv
 import os
 
+# Carregar parâmetros
 with open("parametros.json", "r") as f:
     params = json.load(f)
 
@@ -19,6 +20,7 @@ intervalo_amostra = params["intervalo_amostra"]
 n_spins = tam_x * tam_y
 rede = np.random.choice([-1, 1], size=(tam_x, tam_y))
 
+# Reservado para futura extensão para spins com três estados
 fatores_boltzmann = np.zeros((17, 3))
 for delta in range(-8, 9, 4):
     fatores_boltzmann[delta + 8][0] = np.exp(-(delta * interacao_J + 2 * campo_H) / temperatura)
@@ -53,9 +55,20 @@ def energia():
     )
     return -(interacao_J * interacoes + campo_H * soma_spins) / n_spins
 
+def autocorrelacao(x, max_lag):
+    x = np.array(x)
+    media = np.mean(x)
+    var = np.var(x)
+    n = len(x)
+    return [
+        np.correlate(x[:n-lag] - media, x[lag:] - media)[0] / ((n - lag) * var)
+        for lag in range(max_lag)
+    ]
+
 magnetizacoes = []
 energias = []
 
+# Visualização ao vivo
 figura, (ax_rede, ax_graficos) = plt.subplots(1, 2, figsize=(12, 5), gridspec_kw={'width_ratios': [1, 1.5]})
 imagem = ax_rede.imshow(rede, cmap='coolwarm', vmin=-1, vmax=1)
 ax_rede.set_title(f"Configuração dos Spins (T = {temperatura})")
@@ -97,27 +110,74 @@ anim = animation.FuncAnimation(
 )
 
 saida_base = f"saida_T{temperatura:.2f}".replace('.', '_')
+os.makedirs(saida_base, exist_ok=True)
 
 print("Salvando vídeo...")
 writer = animation.FFMpegWriter(fps=20)
-anim.save(f"{saida_base}.mp4", writer=writer)
+anim.save(f"{saida_base}/animacao.mp4", writer=writer)
 
 print("Salvando arquivos CSV...")
-with open(f"{saida_base}_energia.csv", "w", newline="") as f_ene:
+# Energia e magnetização
+with open(f"{saida_base}/energia.csv", "w", newline="") as f_ene:
     writer = csv.writer(f_ene)
     writer.writerow(["Iteracao", "Energia"])
     writer.writerows(enumerate(energias))
 
-with open(f"{saida_base}_magnetizacao.csv", "w", newline="") as f_mag:
+with open(f"{saida_base}/magnetizacao.csv", "w", newline="") as f_mag:
     writer = csv.writer(f_mag)
     writer.writerow(["Iteracao", "Magnetizacao"])
     writer.writerows(enumerate(magnetizacoes))
 
+# Médias
 media_magnetizacao = np.mean(magnetizacoes)
-with open(f"{saida_base}_magnetizacao_media.csv", "w", newline="") as f_media:
-    writer = csv.writer(f_media)
+media_energia = np.mean(energias)
+with open(f"{saida_base}/magnetizacao_media.csv", "w", newline="") as f:
+    writer = csv.writer(f)
     writer.writerow(["MagnetizacaoMedia"])
     writer.writerow([media_magnetizacao])
 
-print("Simulação finalizada.")
+# Calor específico
+energias_np = np.array(energias)
+var_E = np.var(energias_np)
+calor_especifico = (n_spins / temperatura**2) * var_E
+with open(f"{saida_base}/calor_especifico.csv", "w", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerow(["CalorEspecifico"])
+    writer.writerow([calor_especifico])
+plt.figure()
+plt.plot(energias_np, label="Energia")
+plt.title("Energia ao Longo do Tempo")
+plt.savefig(f"{saida_base}/energia_plot.png")
 
+# Susceptibilidade magnética
+magnetizacoes_np = np.array(magnetizacoes)
+var_M = np.var(magnetizacoes_np)
+susceptibilidade = (n_spins / temperatura) * var_M
+with open(f"{saida_base}/susceptibilidade.csv", "w", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerow(["Susceptibilidade"])
+    writer.writerow([susceptibilidade])
+plt.figure()
+plt.plot(magnetizacoes_np, label="Magnetização")
+plt.title("Magnetização ao Longo do Tempo")
+plt.savefig(f"{saida_base}/magnetizacao_plot.png")
+
+# Autocorrelação
+lags = 100
+autocorr_mag = autocorrelacao(magnetizacoes_np, lags)
+with open(f"{saida_base}/autocorrelacao_magnetizacao.csv", "w", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerow(["Lag", "Autocorrelacao"])
+    writer.writerows(zip(range(lags), autocorr_mag))
+plt.figure()
+plt.plot(range(lags), autocorr_mag)
+plt.title("Autocorrelação da Magnetização")
+plt.savefig(f"{saida_base}/autocorrelacao_plot.png")
+
+# Histograma da magnetização
+plt.figure()
+plt.hist(magnetizacoes_np, bins=40, density=True)
+plt.title("Distribuição da Magnetização")
+plt.savefig(f"{saida_base}/histograma_magnetizacao.png")
+
+print("Todas as medidas foram salvas.")
