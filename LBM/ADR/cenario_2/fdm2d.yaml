@@ -5,14 +5,14 @@ dominio:
   Ly: 1.0
 
 fisica:
-  ux: 0.10
-  uy: 0.10
-  D: 0.10
+  ux: 0.14
+  uy: 0.11
+  D: 0.04      # Adicionado aqui
   R: 0.0
 
 simulacao:
-  tol: 1.0e-12
-  maxIter: 50000
+  tol: 1e-10
+  maxIter: 10000
 
 saida:
-  diretorio: "dados/fdm_adr_2d_results"
+  diretorio: "dados/fdm2d"

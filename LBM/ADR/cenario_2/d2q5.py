@@ -66,7 +66,11 @@ laplacian = -8 * (np.pi**2) * phi_exact
 
 # Termo fonte correto
 S_lattice = (ux_lattice * dphi_dx + uy_lattice * dphi_dy) - D_lattice * laplacian
-
+# Perturbação extrema (pulso tipo delta no centro)
+pulse = np.zeros((Nx, Ny))
+pulse[Nx//3, Ny//3] = 1000.0
+pulse[2*Nx//3, 2*Ny//3] = -1000.0   # negativo
+S_lattice = S_lattice + pulse
 # ==========================================================
 # D2Q5
 # ==========================================================
@@ -95,8 +99,8 @@ phi = np.zeros((Nx, Ny))
 f = equilibrium(phi_exact)
 
 history = []
-tol = config["simulacao"]["tol"]
-maxIter = config["simulacao"]["maxIter"]
+tol = float(config["simulacao"]["tol"])
+maxIter = int(config["simulacao"]["maxIter"])
 
 print("-----------------------")
 print("Configuração D2Q5")
@@ -146,6 +150,8 @@ for it in tqdm(range(maxIter)):
 
 end = time.perf_counter()
 
+phi = phi - phi.min()                 
+phi = phi / (phi.max() + 1e-12)        
 # ==========================================================
 # Métricas
 # ==========================================================
@@ -188,3 +194,4 @@ plt.title("Convergência D2Q5")
 save_fig("convergence.png")
 
 print(f"Resultados salvos em: {output}/")
+

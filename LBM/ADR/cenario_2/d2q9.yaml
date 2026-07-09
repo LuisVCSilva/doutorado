@@ -1,18 +1,17 @@
-# Cenário otimizado para D2Q9 performar muito bem
 dominio:
-  Nx: 80
-  Ny: 80
+  Nx: 100
+  Ny: 100
   Lx: 1.0
   Ly: 1.0
 
 fisica:
-  ux: 0.05
-  uy: 0.05
-  tau: 0.85
+  ux: 0.08
+  uy: 0.06
+  tau: 0.8
 
 simulacao:
   tol: 1e-9
-  maxIter: 15000
+  maxIter: 40000
 
 saida:
-  diretorio: "dados/d2q9_bom"
+  diretorio: "dados/d2q9"

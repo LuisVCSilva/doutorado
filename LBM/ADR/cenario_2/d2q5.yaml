@@ -1,18 +1,17 @@
-# Cenário onde D2Q5 deve ser pior que D2Q9
 dominio:
-  Nx: 80
-  Ny: 80
+  Nx: 100
+  Ny: 100
   Lx: 1.0
   Ly: 1.0
 
 fisica:
-  ux: 0.15
-  uy: 0.15
-  tau: 0.7
+  ux: 0.08
+  uy: 0.06
+  tau: 0.8
 
 simulacao:
-  tol: 1e-8
-  maxIter: 20000
+  tol: 1e-9
+  maxIter: 40000
 
 saida:
-  diretorio: "dados/d2q5_ruim"
+  diretorio: "dados/d2q5"

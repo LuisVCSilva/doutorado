@@ -1,0 +1,3 @@
+O Cenário 2 avalia o desempenho dos solvers LBM D2Q5, D2Q9 e FDM sob uma perturbação gaussiana forte no centro do domínio, adicionada à solução manufaturada clássica $  \phi(x,y) = \sin(2\pi x)\sin(2\pi y)  $.
+Foram utilizados os mesmos parâmetros físicos para todos os métodos (ux = 0.08, uy = 0.06, D \approx 0.10), com o objetivo de comparar a capacidade de cada esquema em capturar tanto a estrutura de quatro lobos quanto a perturbação localizada.
+Este cenário permite analisar a robustez dos métodos frente a gradientes acentuados e fontes suaves, destacando as vantagens do D2Q9 em precisão e estabilidade quando comparado ao D2Q5 e ao FDM.

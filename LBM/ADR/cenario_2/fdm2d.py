@@ -24,8 +24,8 @@ Nx, Ny = config['dominio']['Nx'], config['dominio']['Ny']
 Lx, Ly = config['dominio']['Lx'], config['dominio']['Ly']
 ux, uy = config['fisica']['ux'], config['fisica']['uy']
 print(config['fisica'])
-D = config['fisica']['D']
-R = config['fisica']['R']
+D = float(config['fisica']['D'])
+R = float(config['fisica']['R'])
 output = config['saida']['diretorio']
 
 os.makedirs(output, exist_ok=True)
@@ -112,24 +112,18 @@ lap = (
 # Fonte manufaturada
 
 S = (
-
-    ux*dphidx
-
-    +
-
-    uy*dphidy
-
-    -
-
-    D*lap
-
-    -
-
-    R*phi_exact
-
+    ux * dphidx +
+    uy * dphidy -
+    D * lap -
+    R * phi_exact
 )
 
+# Perturbação: Dois pulsos opostos fortes
+pulse = np.zeros((Nx, Ny))
+pulse[Nx//3, Ny//3] = 1000.0      # pulso positivo
+pulse[2*Nx//3, 2*Ny//3] = -1000.0 # pulso negativo
 
+S = S + pulse
 
 # ==========================================================
 # MATRIZ FDM
