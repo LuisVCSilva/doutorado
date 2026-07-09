@@ -1,0 +1,20 @@
+# ==========================================================
+# Configuração para LBM D1Q3 - Equação ADR 1D (Steady State)
+# ==========================================================
+
+dominio:
+  Nx: 200
+  Lx: 1.0
+
+parametros:
+  ux: 0.0          # Velocidade de advecção (lattice units)
+  tau: 0.8         # Tempo de relaxação (controla a difusão)
+  # Difusão será calculada automaticamente: D = cs2*(tau - 0.5)
+  k_reaction: 0.0  # Coeficiente de reação linear R(phi) = k * phi
+
+saida:
+  diretorio: "dados/lbm_d1q3_adr"
+
+simulacao:
+  tol: 1e-10
+  maxIter: 30000

@@ -1,0 +1,12 @@
+# FDM 1D com malha mais grossa
+dominio:
+  Nx: 80
+  L: 1.0
+
+parametros:
+  u: 0.05
+  D: 0.05
+  R: 0.0
+
+saida:
+  diretorio: "dados/fdm1d_ruim"

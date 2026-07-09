@@ -1,0 +1,11 @@
+dominio:
+  Nx: 100
+  L: 1.0
+
+parametros:
+  u: 0.10
+  D: 0.10
+  R: 0.0
+
+saida:
+  diretorio: "dados/fdm_adr_1d_results"

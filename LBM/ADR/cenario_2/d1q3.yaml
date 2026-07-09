@@ -1,0 +1,16 @@
+# Cenário otimizado para D1Q3 performar bem
+dominio:
+  Nx: 300
+  Lx: 1.0
+
+fisica:
+  ux: 0.05
+  tau: 0.9
+  k_reaction: 0.0
+
+simulacao:
+  tol: 1e-9
+  maxIter: 20000
+
+saida:
+  diretorio: "dados/d1q3_bom"

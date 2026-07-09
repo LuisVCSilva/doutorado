@@ -1,0 +1,17 @@
+dominio:
+  Nx: 100
+  Ny: 100
+  Lx: 1.0
+  Ly: 1.0
+
+fisica:
+  ux: 0.10
+  uy: 0.10
+  tau: 0.8
+
+simulacao:
+  tol: 1.0e-12
+  maxIter: 50000
+
+saida:
+  diretorio: "dados/d2q9_adr_2d_results"

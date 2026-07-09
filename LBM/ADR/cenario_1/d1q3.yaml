@@ -1,0 +1,19 @@
+# ==========================================================
+# Configuração LBM D1Q3 - ADR 1D Steady State
+# ==========================================================
+
+dominio:
+  Nx: 100
+  Lx: 1.0
+
+fisica:
+  ux: 0.1          # Velocidade de advecção (pode aumentar)
+  tau: 0.75        # tau menor = difusão menor
+  k_reaction: 0.0  # Reação (experimente valores como 10 ou -5)
+
+simulacao:
+  tol: 1e-10
+  maxIter: 40000
+
+saida:
+  diretorio: "dados/d1q3_adr_results"

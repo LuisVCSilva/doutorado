@@ -1,0 +1,15 @@
+dominio:
+  Nx: 100
+  Lx: 1.0
+
+fisica:
+  ux: 0.1
+  tau: 0.75
+  k_reaction: 0.0
+
+simulacao:
+  tol: 1e-10
+  maxIter: 30000
+
+saida:
+  diretorio: "dados/d1q2_adr_results"
