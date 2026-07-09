@@ -1,0 +1,9 @@
+Objetivo: Testar a implementação básica e convergência dos modelos com advecção baixa.
+
+Configurações principais:
+- D1Q2: ux = 0.1, tau = 0.75
+- D1Q3: ux = 0.1, tau = 0.75
+- D2Q5 / D2Q9: ux = uy = 0.10, tau = 0.8
+- FDM: ux = uy = 0.10, D = 0.10
+
+Foco: Verificar se todos os métodos conseguem reproduzir a solução exata em regime difusivo.
